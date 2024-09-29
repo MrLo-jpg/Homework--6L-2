@@ -21,9 +21,8 @@ public class Main {
         int clientOs = 1;
         System.out.println(RecommendAppCurrentVersion(2017, 1));
     }
-    private static String RecommendAppCurrentVersion(int deviceYear, int clientOs)
 
-     {
+    private static String RecommendAppCurrentVersion(int deviceYear, int clientOs) {
         String resultMessage = " Усановите ";
         if (isOldDevise(deviceYear)) {
             resultMessage += " lite ";
@@ -40,5 +39,25 @@ public class Main {
     private static boolean isOldDevise(int deviseYear) {
         int currentYear = LocalDate.now().getYear();//2024
         return deviseYear < currentYear && deviseYear < 2015;
+    }
+
+}
+
+class Homework {
+    public static void main(String[] args) {
+        System.out.println(calculateDeliveryDays(80));
+    }
+
+    public static int calculateDeliveryDays(int deliveryDistance) {
+        int result = -1;
+        if (deliveryDistance > 0 && deliveryDistance <= 20) {
+            result = 1;
+        } else if (deliveryDistance <= 60) {
+            result = 2;
+        } else if (deliveryDistance <= 100) {
+            result = 3;
+        }
+        return result;
+
     }
 }
