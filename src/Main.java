@@ -19,11 +19,11 @@ public class Main {
         //Задача 2
         int deviseYear = 2015;
         int clientOs = 1;
-
-        System.out.println(getRecommentAppLicationVersion(2017, 1));
+        System.out.println(RecommendAppCurrentVersion(2017, 1));
     }
+    private static String RecommendAppCurrentVersion(int deviceYear, int clientOs)
 
-    private static String getRecommentAppLicationVersion(int deviceYear, int clientOs) {
+     {
         String resultMessage = " Усановите ";
         if (isOldDevise(deviceYear)) {
             resultMessage += " lite ";
